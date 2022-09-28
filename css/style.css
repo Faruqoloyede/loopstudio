@@ -56,11 +56,6 @@ nav .mainmenu li a{
 nav .mainmenu li a:hover{
     border-bottom: 1px solid var(--White);
 }
-.openmenu{
-    width: 20px;
-    display:none;
-    cursor: pointer;
-}
 .main{
     margin-top:15%;
     width:50%;
@@ -104,6 +99,20 @@ nav .mainmenu li a:hover{
     text-transform: uppercase;
     line-height: 1.0em;
     margin-bottom: 30px;
+    
+}
+.slideleft{
+    animation: slideleft 1s linear forwards;
+}
+@keyframes slideleft{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
 }
 .hero p{
     font-size: 15px;
@@ -201,29 +210,187 @@ nav .mainmenu li a:hover{
     font-family: 'Alata', sans-serif;
     font-size: 12px;
 }
-/*@media (max-width:600px){
-    nav .mainmenu li a{
+.mobile{
+    display: none;
+}
+
+@media (max-width:600px){
+    .desktop{
         display: none;
     }
-    .main{
-        display: none;
-    }
-    .openmenu{
+    .mobile{
         display: block;
     }
-    .picture{
-        display: grid;
-        grid-template-columns: 1fr;
+    .openMenu{
+        cursor: pointer;
     }
-    .main-content{
-        display: flex;
-        flex-direction: column;
+    .mainMenu{
+        position: fixed;
+		right: 0%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background: #12141c;
+		text-align: left;
+		transition: all .40s ease;
+        height:100%;
+        top:0;
+        overflow-x: hidden;
+        padding: 40px 40px;
+        display: none;
+        z-index: 10;
+        transition: 1s ease-in-out;
     }
-    .content-text{
-        position: relative;
+    .lnk{
+        margin-top:20%;
+    }
+    .lnk li a{
+        text-decoration: none;
+        color: var(--White);
+        font-family: 'Josefin Slab', serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    .mainMenu .flex .logo{
+        height: auto;
+        width: 100px;
+    }
+    .flex .closeMenu img{
+        height: auto;
+        width: 25px;
+    }
+    .flex{
+       display: flex;
+       align-items:center;
+       justify-content: space-between;
+    }
+    nav .mainMenu li a{
+        display: block;
+    } 
+    .showcase2{
+        background: url('../mobile/image-hero.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height:90vh;
         width: 100%;
     }
-    .content-img img{
-        width: 200px;
+    .container2{
+        position:relative;
+        max-width: 81rem;
+        width: 100%;
+        margin: 0 auto;
+        padding:0 3rem;
     }
-}*/
+    .main2{
+        margin-top: 40%;
+    }
+    .main-text2 h1{
+        color: var(--White);
+        font-size:35px;
+        font-family:'Josefin Slab', serif;
+        text-transform: uppercase;
+        font-weight:200;
+        border: 2px solid var(--White);
+        padding: 20px 10px;
+        margin-left: 20px;
+        line-height: 2rem;
+        
+    }
+    .content2{
+        width: 100%;
+    }
+    .image img{
+        margin-top:30%;
+        margin-bottom:30px;
+    }
+    .content-text2 h2{
+        font-size: 35px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--Black);
+    }
+    .content-text2 p{
+        font-size: 16px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        color: var(--Gray);
+        text-align:center;
+        margin-top: 20px;
+        line-height: 2rem;
+    }
+    .activity2{
+        width: 100%;
+    }
+    .text2 h2{
+        font-size: 30px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight:lighter;
+        padding-top: 70px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pic h3{
+        position: absolute;
+        color: var(--White);
+        margin-top:15%;
+        margin-left:30px;
+        font-size: 18px;
+        font-family: 'josefin', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+    }.pic img{
+        margin-bottom: 30px;
+    }
+    .activity2 button{
+        background: none;
+        outline:none;
+        border: 1px solid var(--DarkGray);
+        padding:12px 30px;
+        cursor: pointer;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+    .activity2 button:hover{
+        background-color: var(--Black);
+        color: var(--White);
+    }
+    .footer2{
+        background-color: var(--Black);
+        width: 100%;
+    }
+    .end2 .log img{
+        height: auto;
+        width: 150px;
+        margin-top: 50px;
+    }
+    .social2 img{
+        height: auto;
+        width: 30px;
+        padding-left: 10px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .link ul li{
+        color: var(--White);
+        text-decoration: none;
+        padding-right: 12px;
+        padding-top: 12px;
+        margin-top: 10px;
+        font-family: 'Alata', sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+    .end2 p{
+        color: var(--Gray);
+        margin-top: 20px;
+        font-family: 'Alata', sans-serif;
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
